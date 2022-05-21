@@ -5,6 +5,11 @@ from pydantic import BaseModel
 import pandas as pd
 from sklearn import tree
 
+@app.get('/')
+async def index():
+    return 'test'
+
+"""
 class diagnostico(BaseModel):
     tos: bool
     cefalea: bool
@@ -53,3 +58,4 @@ async def diagnostico(diagnostico:diagnostico):
         diagnostico.dolor_pecho,
         diagnostico.otros_sintomas]])
     return str(res[0])
+"""
