@@ -62,4 +62,4 @@ async def diagnostico(diagnostico:diagnostico):
         diagnostico.dolor_pecho,
         diagnostico.otros_sintomas]])
     return str(res[0])
-""""
+"""
