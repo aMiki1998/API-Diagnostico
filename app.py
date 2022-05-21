@@ -5,15 +5,6 @@ from pydantic import BaseModel
 import pandas as pd
 from sklearn import tree
 
-app = FastAPI(title="API de diagnóstico de covid 19",
-            description="test",
-            version="1.0.0")
-
-@app.get('/')
-def index():
-    return 'test'
-
-"""
 class diagnostico(BaseModel):
     tos: bool
     cefalea: bool
@@ -62,4 +53,3 @@ async def diagnostico(diagnostico:diagnostico):
         diagnostico.dolor_pecho,
         diagnostico.otros_sintomas]])
     return str(res[0])
-"""
