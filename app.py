@@ -10,7 +10,7 @@ app = FastAPI(title="API de diagnóstico de covid 19",
             version="1.0.0")
 
 @app.get('/')
-async def index():
+def index():
     return 'test'
 
 """
