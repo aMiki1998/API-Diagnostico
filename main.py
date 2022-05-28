@@ -6,6 +6,6 @@ app = FastAPI(title="API de diagnóstico de covid 19",
 
 @app.get("/inicio")
 async def ruta_prueba():
-    return "Hola mundo"
+    return "Hola mundo 1"
 
     
