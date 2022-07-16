@@ -25,7 +25,7 @@ app = FastAPI(title="API de diagnóstico de covid 19",
             description="test",
             version="1.0.0")
 
-data = pd.read_excel ('Datasetpequeño_Listo.xlsx') 
+data = pd.read_excel ('Dataset.xlsx')
 df = pd.DataFrame(data, columns= ['tos','cefalea','congestion_nasal','dificultad_respiratoria','dolor_garganta','fiebre','diarrea','nauseas','anosmia_hiposmia','dolor_abdominal','dolor_articulaciones','dolor_muscular','dolor_pecho','otros_sintomas'])
 labels = pd.DataFrame(data, columns= ['Flag_sospechoso'])
 classifier = tree.DecisionTreeClassifier()
@@ -33,7 +33,7 @@ classifier.fit(df,labels)
 
 @app.get('/')
 async def index():
-    return 'test'
+    return 'tests'
 
 @app.post('/Diagnostico')
 async def diagnostico(diagnostico:diagnostico):
